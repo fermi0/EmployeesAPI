@@ -16,7 +16,7 @@ This project use SQL for database, which works only in LAN environment, you shou
 
 `dotnet tool install --global dotnet-ef`
 
-`dotnet ef migrations <name of migration>`
+`dotnet ef migrations add <name of migration>`
 
 `dotnet ef database update`
 
