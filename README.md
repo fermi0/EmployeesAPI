@@ -12,6 +12,7 @@ If those packages didn't add automatically then, from NuGet manager Add those pa
 `dotnet watch run`
 
 This project use SQL for database, which works only in LAN environment, you should create a database, and edit the connection string to your preferences. After creating a database name of your choice, run from the root of your project:
+`dotnet tool install --global dotnet-ef`
 `dotnet ef migrations <name of migration>`
 `dotnet ef database update`
 
