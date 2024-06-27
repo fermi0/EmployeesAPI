@@ -9,21 +9,31 @@ To run this project, clone the repository and open it in Visual Studio or VSCode
 	4. Microsoft.EntityFrameworkCore.Tools
 
 If those packages didn't add automatically then, from NuGet manager Add those packages to the project, and start the application:
+
 `dotnet watch run`
 
 This project use SQL for database, which works only in LAN environment, you should create a database, and edit the connection string to your preferences. After creating a database name of your choice, run from the root of your project:
+
 `dotnet tool install --global dotnet-ef`
+
 `dotnet ef migrations <name of migration>`
+
 `dotnet ef database update`
 
 The above command runs the migration update to create the database table using the reference in models, since this is a code-first approach. The first value are NULL, to edit the table, right-click the Tables folder in the SSMS, and click on **edit top 200 rows**. To show the db tables, click on **select top 1000 rows**
 
-Since I used swagger, there is no need to use Postman to manipulate HTTP requests. The swagger is utilized with `https://localhost:<port>/swagger/index.html`. Expand the GET method and click on  **Try it out**. To get all items in the database, click on **Execute**.
+Since I used swagger, there is no need to use Postman to manipulate HTTP requests. The swagger is utilized with:
+
+`https://localhost:<port>/swagger/index.html`
+
+Expand the GET method and click on  **Try it out**. To get all items in the database, click on **Execute**.
 
 A row in the database table can be accessed with parameter, for example:
+
 `https://localhost:7163/api/employees?name=brian`
 
 If items in your database is more than 10, you can use pagination:
+
 `https://localhost:7163/api/Employees?pagenumber=1&pagesize=3`
 
 The above URL will show 3 items in page 1. 
