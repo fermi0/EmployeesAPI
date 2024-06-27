@@ -1,0 +1,5 @@
+﻿@api_HostAddress = https://localhost:7163
+
+GET {{api_HostAddress}}/api/employees
+
+###
