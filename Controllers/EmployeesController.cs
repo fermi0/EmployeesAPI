@@ -44,7 +44,7 @@ namespace api.Controllers
             {
                 return NotFound();
             }
-            return Ok(employeeId.ToEmployeesDto());
+            return Ok(employeeId);
         }
 
         [HttpPost]
