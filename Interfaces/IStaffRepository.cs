@@ -6,7 +6,8 @@ namespace api.Interfaces
 {
     public interface IStaffRepository // This is an abstration method which is a blueprint for repo to implement
     {
-        Task<List<Employee>> GetAllAsync(EmployeeSearchQuery query); // This provides filtering
+        Task<List<Employee>> GetAllAsync(); // This provides filtering
+        Task<List<Employee>> GetQueryAsync(EmployeeSearchQuery query); // This provides filtering
         Task<Employee?> GetIdAsync(int id);
         Task<Employee> AddAsync(Employee createEmployee);
         Task<Employee?> UpdateAsync(int id, UpdateStaffDto editDto);
