@@ -14,8 +14,12 @@ namespace api.Respository
         {
             _db = db;
         }
+        public async Task<List<Employee>> GetAllAsync()
+        {
+            return await _db.Employees.ToListAsync();
+        }
 
-        public async Task<List<Employee>> GetAllAsync(EmployeeSearchQuery query)
+        public async Task<List<Employee>> GetQueryAsync(EmployeeSearchQuery query)
         {
             var filterQ = _db.Employees.AsQueryable(); // Implements query params
             if (!String.IsNullOrWhiteSpace(query.Name)) // Params is name
