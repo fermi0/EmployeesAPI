@@ -18,12 +18,21 @@ namespace api.Controllers
         }
 
         [HttpGet] // Indicates the following action method
-        public async Task<IActionResult> GetAll([FromQuery] EmployeeSearchQuery query) // Retrieve filtered list of employees based on query params
+        public async Task<IActionResult> GetEmployeeQ([FromQuery] EmployeeSearchQuery query) // Retrieve filtered list of employees based on query params
         {
-            var employee = await _StaffRepo.GetAllAsync(query); // Calls I
-            var employeeDto = employee.Select(i => i.ToEmployeesDto()); // Each(i) employee in _StaffRepo is converted using DTO
+            var employee = await _StaffRepo.GetQueryAsync(query);
+            var employeeQDto = employee.Select(i => i.ToEmployeesDto()); // Each(i) employee in _StaffRepo is converted using DTO
 
-            return Ok(employeeDto); // Returns Converted employees list
+            return Ok(employeeQDto); // Returns Converted employees list
+        }
+
+        [HttpGet("all")] // Indicates the following action method
+        public async Task<IActionResult> GetAll() // Retrieve filtered list of employees based on query params
+        {
+            var getAll = await _StaffRepo.GetAllAsync();
+            var employeeDto = getAll.Select(i => i.ToEmployeesDto()); // Each(i) employee in _StaffRepo is converted using DTO
+
+            return Ok(employeeDto);
         }
 
         [HttpGet]
