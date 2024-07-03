@@ -1,9 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using api.Interfaces;
+﻿using api.DTO;
 using api.Data;
 using api.Models;
-using api.DTO;
 using api.Filters;
+using api.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace api.Respository
 {
