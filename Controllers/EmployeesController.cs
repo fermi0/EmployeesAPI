@@ -67,7 +67,7 @@ namespace api.Controllers
                 return NotFound();
             }
 
-            return Ok(editStaff.ToEmployeesDto());
+            return Ok(editStaff);
         }
 
         [HttpDelete]
