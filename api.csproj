@@ -2,9 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <OutputType>Exe</OutputType>
     <Nullable>enable</Nullable>
     <PublishSingleFile>true</PublishSingleFile>
+	<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>44ef5872-167b-4e71-99b7-e3b692081057</UserSecretsId>
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
