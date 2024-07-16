@@ -1,4 +1,4 @@
-A simple practice project for controller-based WebAPI using .NET framework. This project utilize practices that tries to be production-ready, such as utilizing Dependency Injection(DI), Data Transfer Object(DTO), repository pattern, interface, filters, pagination and mappers and SQL server.
+A simple practice project for controller-based WebAPI using .NET core. This project utilize practices that tries to be production-ready, such as utilizing Dependency Injection(DI), Data Transfer Object(DTO), repository pattern, interface, filters, pagination and mappers and SQL server.
 
 To run this project, clone the repository and open it in Visual Studio or VSCode.
 
